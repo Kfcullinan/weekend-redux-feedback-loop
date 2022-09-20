@@ -22,12 +22,20 @@ const understanding = (state = '', action) => {
     }
     return state;
 }
+
+const support = (state = '', action) => {
+    if (action.type === 'SET_SUPPORT') {
+        return action.payload;
+    }
+    return state;
+}
 const storeInstance = createStore(
 
     combineReducers(
         {
             feeling,
             understanding,
+            support,
         }
     ),
     applyMiddleware(logger)

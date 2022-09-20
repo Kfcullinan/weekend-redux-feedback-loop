@@ -1,6 +1,7 @@
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
 // allows us to navigate to another page
 import { useHistory } from 'react-router-dom';
+
 
 const Feeling = () => {
     const history = useHistory();
@@ -17,6 +18,7 @@ const handleChange = (event) => {
 return (
 
     <>
+        
         <h3>How are you feeling?</h3>
         <br />
         <p>1 = The feeling you had when learning Props and anything above that is a win in my book</p>

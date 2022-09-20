@@ -4,6 +4,7 @@ import './App.css';
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
+import Comments from '../Comments/Comments';
 
 function App() {
 
@@ -30,9 +31,9 @@ function App() {
           <Support />
           </Route>
 
-
-        
-
+          <Route exact path="/comments">
+          <Comments />
+          </Route>
 
       </div>
       </Router>
