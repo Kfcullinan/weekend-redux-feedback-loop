@@ -14,6 +14,15 @@ const handleChange2 = (event) => {
     dispatch({ type: 'SET_UNDERSTANDING', payload: event.target.value})
 }
 
+const nextStep = () => {
+    if (understanding !== undefined && understanding.value > 0){
+        history.push('/support');
+    } else{
+        alert ('A number is required')
+    }
+}
+
+
 return (
 
     <>
@@ -23,7 +32,7 @@ return (
         <div>
             {/*step 3 getter and setter */}
             <input value={understanding} onChange={handleChange2} className="input" type="number"/>
-            <button onClick={() => history.push('/support')} className="button">Next</button>
+            <button onClick={nextStep} className="button">Next</button>
         </div>
     </>
 )

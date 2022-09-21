@@ -14,6 +14,14 @@ const handleChange3 = (event) => {
     dispatch({ type: 'SET_SUPPORT', payload: event.target.value})
 }
 
+const nextStep = () => {
+    if (support !== undefined && support.value > 0){
+        history.push('/comments');
+    } else{
+        alert ('A number is required')
+    }
+}
+
 return (
 
     <>
@@ -23,7 +31,7 @@ return (
         <div>
             {/*step 3 getter and setter */}
             <input value={support} onChange={handleChange3} className="input" type="number"/>
-            <button onClick={() => history.push('/comments')} className="button">Next</button>
+            <button onClick={nextStep} className="button">Next</button>
         </div>
     </>
 )

@@ -23,7 +23,7 @@ return (
         <div>
             {/*step 3 getter and setter */}
             <input value={support} onChange={handleChange4} className="input" type="text"/>
-            <button onClick={() => history.push('/comments')} className="button">Next</button>
+            <button onClick={() => history.push('/review')} className="button">Next</button>
         </div>
     </>
 )

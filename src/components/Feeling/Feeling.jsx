@@ -14,7 +14,13 @@ const handleChange = (event) => {
     //passing data to our reducer
     dispatch({ type: 'SET_FEELING', payload: event.target.value})
 }
-
+const nextStep = () => {
+    if (feeling !== undefined && feeling.length){ //something wrong here> 0
+        history.push('/understanding');
+    } else {
+        alert ('A number is required')
+    }
+}
 return (
 
     <>
@@ -25,10 +31,10 @@ return (
         <div>
             {/*step 3 getter and setter */}
             <input value={feeling} onChange={handleChange} className="input" type="number"/>
-            <button onClick={() => history.push('/understanding')} className="button">Next</button>
+            <button onClick={nextStep} className="button">Next</button>
         </div>
     </>
-)
+)      
 }
 
 export default Feeling;
