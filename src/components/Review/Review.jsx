@@ -12,12 +12,12 @@ const Review = () => {
     const displayComments = useSelector(store => store.comments)
     return (
         <>
-        <h3>Summary</h3>
+        <h1>Summary:</h1>
         <div>
-                <h2>{displayFeeling}</h2>
-                <h2>{displayUnderstanding}</h2>
-                <h2>{displaySupport}</h2>
-                <h2>{displayComments}</h2>
+                <h2>Feeling: {displayFeeling}</h2>
+                <h2>Understanding: {displayUnderstanding}</h2>
+                <h2>Support: {displaySupport}</h2>
+                <h2>Comments: {displayComments}</h2>
                 <button onClick={() => history.push('/summary')} className="button">Submit</button>
         </div>
         </>
