@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 
 const Review = () => {
+    const dispatch = useDispatch();
     const history= useHistory();
     const displayFeeling = useSelector(store => store.feeling)
     const displayUnderstanding = useSelector(store => store.understanding)
@@ -23,4 +24,4 @@ const Review = () => {
     );
 }
 
-export default Summary;
+export default Review;

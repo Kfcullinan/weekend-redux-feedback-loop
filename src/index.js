@@ -29,6 +29,13 @@ const support = (state = '', action) => {
     }
     return state;
 }
+
+const comments = (state = '', action) => {
+    if (action.type === 'SET_COMMENTS') {
+        return action.payload;
+    }
+    return state;
+}
 const storeInstance = createStore(
 
     combineReducers(

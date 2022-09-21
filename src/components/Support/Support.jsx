@@ -15,7 +15,7 @@ const handleChange3 = (event) => {
 }
 
 const nextStep = () => {
-    if (support !== undefined && support.value > 0){
+    if (support !== undefined && support.length > 0){
         history.push('/comments');
     } else{
         alert ('A number is required')

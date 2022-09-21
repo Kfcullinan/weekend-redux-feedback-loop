@@ -15,13 +15,12 @@ const handleChange2 = (event) => {
 }
 
 const nextStep = () => {
-    if (understanding !== undefined && understanding.value > 0){
+    if (understanding !== undefined && understanding.length > 0){
         history.push('/support');
     } else{
         alert ('A number is required')
     }
 }
-
 
 return (
 
