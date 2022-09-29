@@ -13,16 +13,16 @@ const Review = () => {
     const displayComments = useSelector(store => store.comments)
     const dispatch = useDispatch();
 
-    submitFeedback = () => {
+    const submitFeedback = () => {
         console.log('submitFeedback');
         axios({
             method: 'POST',
             url: '/feedback',
             data: {
-                feeling,
-                understanding,
-                support,
-                comments
+                feeling: displayFeeling,
+                understanding: displayUnderstanding,
+                support: displaySupport,
+                comments: displayComments
             }
             }).then((response) => {
                 dispatch({ type: 'CLEAR_ALL'});
