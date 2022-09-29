@@ -21,7 +21,7 @@ function App() {
     axios({
       method: 'GET',
       url: '/feedback'
-    }).then(() => {
+    }).then((response) => {
       setFeedBackList(response.data);
     }).catch((error) => {
       console.log(error);
