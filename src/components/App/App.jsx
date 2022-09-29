@@ -6,10 +6,30 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function App() {
+  const [feedbackList, setFeedBackList] = useState([]);
 
-  return (
+  useEffect(() => {
+    console.log('in useEffect');
+    fetchFeedback();
+  }, []);
+
+  const fetchFeedback = () => {
+    axios({
+      method: 'GET',
+      url: '/feedback'
+    }).then(() => {
+      setFeedBackList(response.data);
+    }).catch((error) => {
+      console.log(error);
+      alert('Get to gettin in your GET!')
+    });
+    }
+    
+    return (
     <div className='App'>
 
       <Router>
@@ -37,8 +57,10 @@ function App() {
           </Route>
 
           <Route exact path="/review">
-          <Review/>
+          <Review />
           </Route>
+
+          
 
       </div>
       </Router>

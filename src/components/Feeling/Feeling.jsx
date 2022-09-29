@@ -27,7 +27,7 @@ return (
         
         <h3>How are you feeling?</h3>
         <br />
-        <p>1 = The feeling you had when learning Props and anything above that is a win in my book</p>
+        <p>1-5</p>
         <div>
             {/*step 3 getter and setter */}
             <input value={feeling} onChange={handleChange} className="input" type="number"/>
